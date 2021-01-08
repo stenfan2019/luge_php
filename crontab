@@ -1,0 +1,21 @@
+//彩期每天凌晨1分执行
+php /data/work/live_php/yii periods 100
+php /data/work/live_php/yii periods 103
+php /data/work/live_php/yii periods 105
+
+//派奖 每隔1秒执行一次
+php /data/work/live_php/yii sendprize 100 
+
+//过期红包 一分钟执行一次
+php /data/work/live_php/yii hbaorecycle
+
+//机器人发红包
+php /data/work/live_php/yii hbaorebot/send 1000
+nohup php /data/work/live_php/yii hbaorebot/send 1000 > /data/log/hbaorebot_send.out 2>&1 &
+
+//机器人抢红包
+php /data/work/live_php/yii hbaorebot/rob 1000
+nohup php /data/work/live_php/yii hbaorebot/rob 1000 > /data/log/hbaorebot_rob1.out 2>&1 &
+nohup php /data/work/live_php/yii hbaorebot/rob 1000 > /data/log/hbaorebot_rob2.out 2>&1 &
+
+
