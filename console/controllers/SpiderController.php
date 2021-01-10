@@ -75,7 +75,7 @@ class SpiderController extends Controller
                 'accept'     => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
                 'upgrade-insecure-requests' => '1',
             
-                'Cookie' => 'user_id=7543; user_name=stenfan; group_id=3; group_name=VIP%E4%BC%9A%E5%91%98; user_check=1ffeb39418a227841801589a544c9496; user_portrait=%2Fstatic%2Fimages%2Ftouxiang.png; Hm_lvt_ef7d69b0d8afbcf82c7fd9048fc1d037=1610158997,1610243548; Hm_lpvt_ef7d69b0d8afbcf82c7fd9048fc1d037=1610244340',
+                'Cookie' => 'PHPSESSID=sqnn72runkuqv71rfab2o091t1; Hm_lvt_ef7d69b0d8afbcf82c7fd9048fc1d037=1610017443,1610101731,1610102064,1610102547; user_id=7543; user_name=stenfan; group_id=3; group_name=VIP%E4%BC%9A%E5%91%98; user_check=015fff4190fd5ef9ff069110bb790bb3; user_portrait=%2Fstatic%2Fimages%2Ftouxiang.png; Hm_lpvt_ef7d69b0d8afbcf82c7fd9048fc1d037=1610286866',
             ]
         ]);
         $body = $response->getBody(); //获取响应体，对象
