@@ -1,68 +1,69 @@
          <nav class="path_bar">
 			<div class="word_wrapper">
 				<ul class="menu_container">
-					<li class="menu_items"><a href="/" class="type home status_show">首頁</a></li>
-					<li class="menu_items"><a href="/newest"
+					<li class="menu_items"><a href="/" class="type home <?=$this->context->now_nav=='home' ? 'status_show':''?>">首頁</a></li>
+					<li class="menu_items"><a href="/zuijing.html"
+
 						class="type apen">最近更新</a></li>
 					<li class="menu_items"></li>
 					<li class="menu_items">
 						<div>
-							<a href="/index.php/vod/type/id/2.html" class="type">精選系列</a>
+							<a href="/jingxuan.html" class="type <?=$this->context->now_nav=='jx' ? 'status_show':''?>">精選系列</a>
 						</div>
 					</li>
 					<li class="menu_items">
 						<div>
-							<a href="/index.php/vod/type/id/1.html" class="type">中文字幕</a>
+							<a href="/zwzm.html" class="type <?=$this->context->now_nav=='zwzm' ? 'status_show':''?>">中文字幕</a>
 						</div>
 					</li>
 					<li class="menu_items">
 						<div>
-							<a href="/index.php/vod/type/id/3.html" class="type">亞洲無碼</a>
+							<a href="/yzwm.html" class="type <?=$this->context->now_nav=='yzwm' ? 'status_show':''?>">亞洲無碼</a>
 						</div>
 					</li>
 					<li class="menu_items">
 						<div>
-							<a href="/index.php/vod/type/id/4.html" class="type">亞洲有碼</a>
+							<a href="/yzym.html" class="type <?=$this->context->now_nav=='yzym' ? 'status_show':''?>">亞洲有碼</a>
 						</div>
 					</li>
 					<li class="menu_items">
 						<div>
-							<a href="/index.php/vod/type/id/5.html" class="type">無碼破解</a>
+							<a href="/wmpj.html" class="type <?=$this->context->now_nav=='wmpj' ? 'status_show':''?>">無碼破解</a>
 						</div>
 					</li>
 					<li class="menu_items">
 						<div>
-							<a href="/index.php/vod/type/id/6.html" class="type">偷拍自拍</a>
+							<a href="/tpzp.html" class="type <?=$this->context->now_nav=='tpzp' ? 'status_show':''?>">偷拍自拍</a>
 						</div>
 					</li>
 					<li class="menu_items">
 						<div>
-							<a href="/index.php/vod/type/id/7.html" class="type">網紅</a>
+							<a href="/wanghong.html" class="type <?=$this->context->now_nav=='wh' ? 'status_show':''?>">網紅</a>
 						</div>
 					</li>
 					<li class="menu_items">
 						<div>
-							<a href="/index.php/vod/type/id/8.html" class="type">主播</a>
+							<a href="/zhubo.html" class="type <?=$this->context->now_nav=='zb' ? 'status_show':''?>">主播</a>
 						</div>
 					</li>
 					<li class="menu_items">
 						<div>
-							<a href="/index.php/vod/type/id/12.html" class="type">明星</a>
+							<a href="/star.html" class="type <?=$this->context->now_nav=='mx' ? 'status_show':''?>">明星</a>
 						</div>
 					</li>
 					<li class="menu_items">
 						<div>
-							<a href="/index.php/vod/type/id/13.html" class="type">三級</a>
+							<a href="/sanji.html" class="type <?=$this->context->now_nav=='sj' ? 'status_show':''?>">三級</a>
 						</div>
 					</li>
 					<li class="menu_items">
 						<div>
-							<a href="/index.php/vod/type/id/14.html" class="type">歐美</a>
+							<a href="/oumei.html" class="type <?=$this->context->now_nav=='om' ? 'status_show':''?>">歐美</a>
 						</div>
 					</li>
 					<li class="menu_items">
 						<div>
-							<a href="/index.php/vod/type/id/15.html" class="type">動漫</a>
+							<a href="/dongman.html" class="type <?=$this->context->now_nav=='dm' ? 'status_show':''?>">動漫</a>
 						</div>
 					</li>
 				</ul>

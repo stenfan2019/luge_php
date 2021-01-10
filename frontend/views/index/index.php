@@ -1,15 +1,3 @@
-<div class="con_search">
-			<form method="get" name="search" action="/index.php/vod/search.html"
-				class="btn_search focus">
-				<span class="tit_search">搜洞洞</span> <input type="text" name="wd"
-					placeholder="搜洞洞" required="required" class="search_bar_m" />
-				<div class="search_btn_m">
-					<button style="background: transparent;" type="submit">
-						<i class="fa fa-search"></i>
-					</button>
-				</div>
-			</form>
-		</div>
 		<div id="carousel-example-generic" data-ride="carousel"
 			data-interval="3000" class="carousel slide"
 			style="max-width: 1170px; margin: 0px auto; max-height: 468px;">
