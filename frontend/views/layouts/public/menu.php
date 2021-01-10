@@ -2,7 +2,7 @@
 			<div class="word_wrapper">
 				<ul class="menu_container">
 					<li class="menu_items"><a href="/" class="type home status_show">首頁</a></li>
-					<li class="menu_items"><a href="/index.php/vod/search/by/time.html"
+					<li class="menu_items"><a href="/newest"
 						class="type apen">最近更新</a></li>
 					<li class="menu_items"></li>
 					<li class="menu_items">
