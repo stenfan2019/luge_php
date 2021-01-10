@@ -32,6 +32,8 @@
 	</header>
 
 	<div id="container">
+	    <?php $this->beginContent('@app/views/layouts/public/search.php') ?>
+        <?php $this->endContent() ?>
 		<?=$content?>
 	</div>
 	  <?php $this->beginContent('@app/views/layouts/public/footer.php') ?>

@@ -47,6 +47,22 @@ return [
             'enablePrettyUrl' => env('FRONTEND_PRETTY_URL', true),
             'showScriptName' => false,
             'rules' => [
+                'GET /zuijing.html'  => 'index/zjgx',
+                'GET /jingxuan.html' => 'index/jingxuan',
+                'GET /zwzm.html'     => 'index/zwzm',
+                'GET /yzwm.html'     => 'index/yzwm',
+                'GET /yzym.html'     => 'index/yzym',
+                'GET /wmpj.html'     => 'index/wmpj',
+                'GET /tpzp.html'     => 'index/tpzp',
+                'GET /wanghong.html' => 'index/wh',
+                'GET /zhubo.html'    => 'index/zhubo',
+                'GET /star.html'     => 'index/star',
+                'GET /sanji.html'    => 'index/sanji',
+                'GET /oumei.html'    => 'index/oumei',
+                'GET /dongman.html'  => 'index/dongman',
+                
+                'GET /prestrain.html'=> 'player/prestrain',
+                'GET /dplayer.html'  => 'player/index',
             ],
         ],
 
