@@ -45,7 +45,7 @@ class SpiderController extends Controller
                         $spvideo->vod_down     = $item['vod_down'];
                         $spvideo->vod_time     = $item['vod_time'];
                         $spvideo->type_name    = $item['type']['type_name'];
-                        $video_url = "https://www.hxcsxs.org/index.php/vod/play/id" . $item['vod_id'] . '/sid/1/nid/1.html';
+                        $video_url = "https://www.hxcsxs.org/index.php/vod/play/id/" . $item['vod_id'] . '/sid/1/nid/1.html';
                         $spvideo->url          = $video_url;
                         $spvideo->video_url    = '';
                         $spvideo->vod_time_add = $item['vod_time_add'];
