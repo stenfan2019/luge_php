@@ -40,7 +40,7 @@
             ]]
             , page: true
             , limit: 20
-            , height: 'full-180'
+            , height: 'full-220'
         });
 
       //监听工具条
