@@ -1,32 +1,40 @@
+	<div class="videoGroup link-box" style="display:none;">
+	   <div class="section-title grayBorder">
+			<h2>友情鏈接</h2>
+		</div>
+		<div class="video-wrapper index_M" style="min-height: 0;">
+			<div id="newLoader" class="loader" style="display: none;">
+				<div class="loader-inner ball-beat">
+					<div></div>
+					<div></div>
+					<div></div>
+			    </div>
+		   </div>
+	    </div>
+    </div>
 	<footer id="footer">
 		<div class="footer-container">
 			<div class="footer-upper">
 				<div class="footer-link">
-					<a href="/"><span class="footer_logo cn"><img
-							src="https://img.hxcsxs1.xyz/upload/site/20200526-1/ac9236d845a001dc464fd808df9d350b.png"
-							width="100%"></span></a>
+					<a href="/">
+    					<span class="footer_logo cn">
+    					   <img src="/static/images/javLogo_cn.png" width="100%">
+    					 </span>
+					 </a>
 				</div>
 			</div>
-			<div class="footer-declaration">
+			<div class="footer-declaration" style="padding-left:200px;margin-top: -20px; ">
 				<a
-					href="https://wpa.qq.com/msgrd?v=3&uin=766632318&site=qq&menu=yes"
+					href="/"
 					target="_blank">聯絡我們</a> <span>Copyright © 2019
-					含羞草实习所www.hxcsxs.org All Rights Reserved.</span> <span>禁止中國大陸用戶和未滿18周歲用戶訪問</span>
-				<span>
-				<script>
-                    var _hmt = _hmt || [];
-                    (function() {
-                      var hm = document.createElement("script");
-                      hm.src = "https://hm.baidu.com/hm.js?ef7d69b0d8afbcf82c7fd9048fc1d037";
-                      var s = document.getElementsByTagName("script")[0]; 
-                      s.parentNode.insertBefore(hm, s);
-                    })();
-                </script> 
-                </span>
+					陆蛤视频 www.lugetv.com All Rights Reserved.</span> <span>禁止中國大陸用戶和未滿18周歲用戶訪問</span>
+				
 			</div>
 		</div>
 	</footer>
 	<script src="/static/js/jquery.min.js"></script>
 	<script src="/static/js/bootstrap.min.js"></script>
 	
-	<div class="layui-layer-move"></div>
+	<div class="layui-layer-move">
+	   <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279293347'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1279293347%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+	</div>

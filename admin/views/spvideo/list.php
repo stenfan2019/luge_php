@@ -2,12 +2,13 @@
     <div class="layui-card">
         <div class="layui-card-body">
             <div style="padding-bottom: 10px;">
-                <button class="layui-btn layuiadmin-btn-list" data-type="add">添加礼物</button>
+                <button class="layui-btn layuiadmin-btn-list" data-type="add">批量加入</button>
             </div>
             <table id="data_list" lay-filter="data_list"></table>
             <script type="text/html" id="data_control">
-                <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>编辑</a>
-                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>删除</a>
+                <a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="todo"><i class="layui-icon"></i>运营</a>
+                <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon"></i>编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon"></i>删除</a>
             </script>
         </div>
     </div>
@@ -32,15 +33,15 @@
                 , {field: 'vod_hits',width:'7%', title: '点击数',align:'left'}
                 , {field: 'vod_up',width:'7%', title: '收藏数',align:'left'}
                 , {field: 'vod_down',width:'7%', title: '下载数',align:'left'}
+                , {field: 'video_url',width:'15%', title: '视频地址',align:'center'}
                 , {field: 'vod_pic',width:'15%', title: '图片地址',align:'center'}
                 , {field: 'url',width:'15%', title: '播放地址',align:'center'}
-                , {field: 'video_url',width:'15%', title: '视频地址',align:'center'}
                 , {field: 'vod_time',width:'10%', title: '上传时间',align:'center'}
-                , {title: '操作',width:'180px', align: 'center', fixed: 'right', toolbar: '#data_control'}
+                , {title: '操作',width:'240px', align: 'center', fixed: 'right', toolbar: '#data_control'}
             ]]
             , page: true
             , limit: 20
-            , height: 'full-220'
+            , height: '560px'
         });
 
       //监听工具条
@@ -85,7 +86,31 @@
                         submit.trigger('click');
                     }
                 });
-            } 
+            } else if (obj.event === 'todo') {
+            	var data = obj.data;
+                if (obj.event === 'del') {    //点击列表事件del
+                    layer.confirm('确定删除此内容？', function (index) {
+                        admin.req({
+                            type: 'post',
+                            url: '/spvideo/del?id='+ data.id,
+                            dataType: 'json',
+                            data: {id: data.id},
+                            success: function (res) {
+                                if (res.code == '0') {
+                                    layer.msg('删除成功', {icon: 1}, function () {
+                                        //obj.del();
+                                        table.reload('data_list');
+                                        //layer.close(index);
+                                    });
+                                } else {
+                                    layer.msg('添加失败', {icon: 2});
+                                }
+                            }
+                        });
+
+                    });
+                }
+            }
         });
 
         table.on('sort(data_list)', function (obj) { //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"

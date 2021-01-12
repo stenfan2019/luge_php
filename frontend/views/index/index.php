@@ -1,82 +1,4 @@
-		<div id="carousel-example-generic" data-ride="carousel"
-			data-interval="3000" class="carousel slide"
-			style="max-width: 1170px; margin: 0px auto; max-height: 468px;">
-			<ol class="carousel-indicators">
-				<li data-target="#carousel-example-generic" data-slide-to="1"
-					class=" active "></li>
-				<li data-target="#carousel-example-generic" data-slide-to="2"
-					class=""></li>
-				<li data-target="#carousel-example-generic" data-slide-to="3"
-					class=""></li>
-				<li data-target="#carousel-example-generic" data-slide-to="4"
-					class=""></li>
-				<li data-target="#carousel-example-generic" data-slide-to="5"
-					class=""></li>
-				<li data-target="#carousel-example-generic" data-slide-to="6"
-					class=""></li>
-				<li data-target="#carousel-example-generic" data-slide-to="7"
-					class=""></li>
-				<li data-target="#carousel-example-generic" data-slide-to="8"
-					class=""></li>
-				<li data-target="#carousel-example-generic" data-slide-to="9"
-					class=""></li>
-			</ol>
-			<div role="listbox" class="carousel-inner">
-				<div class="item  active ">
-					<a href="/index.php/vod/search/wd/七森莉莉.html"><img
-						src="https://img.hxcsxs1.xyz/upload/website/20201031-1/7fbb3722f56188758e9409cd861749bf.jpg"
-						data-holder-rendered="true" /></a>
-				</div>
-				<div class="item ">
-					<a href="/index.php/vod/search/wd/三上悠亜.html"><img
-						src="https://img.hxcsxs1.xyz/upload/website/20201031-1/de051b14d43a56a30ec08c9a3c733577.jpg"
-						data-holder-rendered="true" /></a>
-				</div>
-				<div class="item ">
-					<a href="/index.php/vod/play/id/8022/sid/1/nid/1.html"><img
-						src="https://img.hxcsxs1.xyz/upload/website/20200925-1/474b260c8daffcdf0110f82d87f210dc.jpg"
-						data-holder-rendered="true" /></a>
-				</div>
-				<div class="item ">
-					<a href="/index.php/vod/search/wd/葵つかさ.html"><img
-						src="https://img.hxcsxs1.xyz/upload/website/20200925-1/1dae83481a846a03d541edc8e4b1a65f.jpg"
-						data-holder-rendered="true" /></a>
-				</div>
-				<div class="item ">
-					<a href="/index.php/vod/search/wd/相沢みなみ.html"><img
-						src="https://img.hxcsxs1.xyz/upload/website/20200925-1/d5e15f1ef7036769759d8e2efbbe5e10.jpg"
-						data-holder-rendered="true" /></a>
-				</div>
-				<div class="item ">
-					<a href="/index.php/vod/search/wd/宇都宫紫苑.html"><img
-						src="https://img.hxcsxs1.xyz/upload/website/20200630-1/18d4eaad37ff479e61a75cbfe079a5e4.jpg"
-						data-holder-rendered="true" /></a>
-				</div>
-				<div class="item ">
-					<a href="/index.php/vod/search/wd/橋本ありな.html"><img
-						src="https://img.hxcsxs1.xyz/upload/website/20200528-1/b1039d75cd74dc8a433b11b3c67ba0d2.jpg"
-						data-holder-rendered="true" /></a>
-				</div>
-				<div class="item ">
-					<a href="/index.php/vod/search/wd/天使もえ.html"><img
-						src="https://img.hxcsxs1.xyz/upload/website/20200528-1/3c9362a7a670c283df5dba18b55a46cd.jpg"
-						data-holder-rendered="true" /></a>
-				</div>
-				<div class="item ">
-					<a href="/index.php/vod/search/wd/枫カレン.html"><img
-						src="https://img.hxcsxs1.xyz/upload/website/20200528-1/0ca6b88a29553bf29d88c530d67fa6f4.jpg"
-						data-holder-rendered="true" /></a>
-				</div>
-			</div>
-			<a href="#carousel-example-generic" role="button" data-slide="prev"
-				class="left carousel-control"><span aria-hidden="true"
-				class="glyphicon glyphicon-chevron-left"></span> <span
-				class="sr-only">Previous</span></a> <a
-				href="#carousel-example-generic" role="button" data-slide="next"
-				class="right carousel-control"><span aria-hidden="true"
-				class="glyphicon glyphicon-chevron-right"></span> <span
-				class="sr-only">Next</span></a>
-		</div>
+
 		<section class="sectionContent">
 
 			<div class="videoGroup">
@@ -2442,18 +2364,5 @@
 				</div>
 			</div>
 
-			<div class="videoGroup link-box">
-				<div class="section-title grayBorder">
-					<h2>友情鏈接</h2>
-				</div>
-				<div class="video-wrapper index_M" style="min-height: 0;">
-					<div id="newLoader" class="loader" style="display: none;">
-						<div class="loader-inner ball-beat">
-							<div></div>
-							<div></div>
-							<div></div>
-						</div>
-					</div>
-				</div>
-			</div>
+			
 		</section>

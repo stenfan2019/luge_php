@@ -20,7 +20,7 @@ class SpvideoController extends Base
             $page_num = ceil($count / $limit);
             $pages = new Pagination(['totalCount' => $count,'defaultPageSize'=>$limit,'page'=>$page-1]);
             $models = $query->offset($pages->offset)
-                    ->orderBy('id desc')
+                    ->orderBy('id asc')
                     ->limit($limit)
                     ->asArray()->all();
             $data = [
