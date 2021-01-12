@@ -34,4 +34,13 @@ class SpvideoController extends Base
             return $this->render('list');
         }
     }
+    
+    public function actionTodo()
+    {
+        $id = Yii::$app->request->get('id');
+        $one = SpVideo::findOne($id);
+        if($one){
+            
+        }
+    }
 }

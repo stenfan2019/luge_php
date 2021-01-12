@@ -88,11 +88,11 @@
                 });
             } else if (obj.event === 'todo') {
             	var data = obj.data;
-                if (obj.event === 'del') {    //点击列表事件del
-                    layer.confirm('确定删除此内容？', function (index) {
+             
+                
                         admin.req({
                             type: 'post',
-                            url: '/spvideo/del?id='+ data.id,
+                            url: '/spvideo/todo?id='+ data.id,
                             dataType: 'json',
                             data: {id: data.id},
                             success: function (res) {
@@ -108,8 +108,7 @@
                             }
                         });
 
-                    });
-                }
+                 
             }
         });
 
