@@ -74,7 +74,7 @@
             } else if (obj.event === 'edit') {  //点击列表事件edit
                 layer.open({
                     type: 2
-                    , title: '修改礼物信息'
+                    , title: '修改信息'
                     , content: '/spvideo/edit?id=' + data.id
                     , maxmin: true
                     , area: ['650px', '600px']
@@ -97,13 +97,13 @@
                             data: {id: data.id},
                             success: function (res) {
                                 if (res.code == '0') {
-                                    layer.msg('删除成功', {icon: 1}, function () {
+                                    layer.msg('加入成功', {icon: 1}, function () {
                                         //obj.del();
                                         table.reload('data_list');
                                         //layer.close(index);
                                     });
                                 } else {
-                                    layer.msg('添加失败', {icon: 2});
+                                    layer.msg('加入失败', {icon: 2});
                                 }
                             }
                         });

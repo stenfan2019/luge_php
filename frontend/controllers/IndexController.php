@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 use yii\web\Controller;
+use common\models\Video;
 
 class IndexController extends Controller
 {
@@ -10,6 +11,8 @@ class IndexController extends Controller
     public $layout = 'main1';
     
     public $now_nav = 'home';
+    
+    public $seo_title = "在線成人視頻";
 
     public function actionIndex()
     {
@@ -20,117 +23,100 @@ class IndexController extends Controller
     //最近更新
     public function actionZjgx()
     {
-        $this->now_nav = 'zjgx';
-        return $this->render('list',[
-            'sub_title'   => '最近更新'
-            
-        ]);
+        return $this->_videolist(4,'zjgx','最近更新');
+       
     }
     
     //精选
     public function actionJingxuan()
     {
-        $this->now_nav = 'jx';
-        return $this->render('list',[
-            'sub_title'   => '最近更新'
-        ]);
+        return $this->_videolist(4,'jx','精選系列');
+        
     }
     
     //中文字幕
     public function actionZwzm()
     {
-        $this->now_nav = 'zwzm';
-        return $this->render('list',[
-            'sub_title'   => '最近更新'
-        ]);
+        return $this->_videolist(4,'zwzm','中文字幕');
+       
     }
     
     
     //亚洲无码
     public function actionYzwm()
     {
-       $this->now_nav = 'yzwm';
-       return $this->render('list',[
-            'sub_title'   => '最近更新'
-        ]);
+       return $this->_videolist(4,'yzwm','亞洲無碼');
+      
     }
     
     //亚洲有码
     public function actionYzym()
     {
-        $this->now_nav = 'yzym';
-        return $this->render('list',[
-            'sub_title'   => '最近更新'
-        ]);
+       return $this->_videolist(4,'yzym','亞洲有碼');
     }
     //无码破解
     public function actionWmpj()
     {
-        $this->now_nav = 'wmpj';
-        return $this->render('list',[
-            'sub_title'   => '最近更新'
-        ]);
+       return $this->_videolist(4,'wmpj','無碼破解');
     }
     //偷拍自拍
     public function actionTpzp()
     {
-        $this->now_nav = 'tpzp';
-        return $this->render('list',[
-            'sub_title'   => '最近更新'
-        ]);
+        return $this->_videolist(4,'tpzp','偷拍自拍');
+         
     }
     
     //网红
     public function actionWh()
     {
-        $this->now_nav = 'wh';
-        return $this->render('list',[
-            'sub_title'   => '最近更新'
-        ]);
+        return $this->_videolist(4,'wh','網紅');
+        
     }
     
     //主播
     public function actionZhubo()
     {
-        $this->now_nav = 'zb';
-        return $this->render('list',[
-            'sub_title'   => '最近更新'
-        ]);
+        return $this->_videolist(4,'zb','主播');
+       
     }
     
     //明星
     public function actionStar()
     {
-        $this->now_nav = 'mx';
-        return $this->render('list',[
-            'sub_title'   => '最近更新'
-        ]);
+        return $this->_videolist(4,'mx','明星');
     }
     
     //主播
     public function actionSanji()
     {
-        $this->now_nav = 'sj';
-        return $this->render('list',[
-            'sub_title'   => '最近更新'
-        ]);
+       return $this->_videolist(4,'sj','三級');
     }
     
     //欧美
     public function actionOumei()
     {
-        $this->now_nav = 'om';
-        return $this->render('list',[
-            'sub_title'   => '最近更新'
-        ]);
+        return $this->_videolist(4,'om','歐美');
+        
     }
     
     //动漫
     public function actionDongman()
     {
-        $this->now_nav = 'dm';
-        return $this->render('list',[
-            'sub_title'   => '最近更新'
+        return $this->_videolist(4,'dm','動漫');
+        
+    }
+    
+    protected function _videolist($cate_id,$now_nav,$sub_title)
+    {
+        $this->now_nav = $now_nav;
+        $this->seo_title = $sub_title;
+        $list = Video::find()->where("cate_id=$cate_id")
+              ->orderBy('update_time desc')->limit(60)->asArray()->all();
+         
+       return  $this->render('list',[
+            'sub_title'   => $sub_title,
+            'cate_id'     => $cate_id,
+            'videos'      =>  $list
         ]);
     }
 }
