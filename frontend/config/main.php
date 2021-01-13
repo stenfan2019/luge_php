@@ -62,6 +62,7 @@ return [
                 'GET /dongman.html'  => 'index/dongman',
                 
                 #注册登录
+                'GET /detail_<id:\d+>.html' => 'video/detail',
                 'GET /reg.html'      => 'user/reg',
                 'GET /login.html'    => 'user/login',
             ],

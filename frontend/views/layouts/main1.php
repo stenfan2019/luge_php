@@ -4,9 +4,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta content="width=device-width, initial-scale=1.0, user-scalable=0"
 	name="viewport" />
-<title>陆蛤TV-<?=$this->context->seo_title ?>、www.lugetv.com</title>
-<meta name="description" content="成人视频" />
-<meta name="keywords" content="陆蛤TV" />
+<title><?=$this->context->seo_title ?>-陆蛤視頻、www.lugetv.com</title>
+<meta name="description" content="成人視頻" />
+<meta name="keywords" content="陆蛤視頻" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <link href="/static/css/bootstrap.css"rel="stylesheet" />
 <link href="/static/css/font-awesome.min.css"rel="stylesheet" />
