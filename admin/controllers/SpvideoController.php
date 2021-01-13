@@ -43,4 +43,9 @@ class SpvideoController extends Base
             
         }
     }
+    
+    public function actionEdit()
+    {
+        
+    }
 }
