@@ -61,8 +61,9 @@ return [
                 'GET /oumei.html'    => 'index/oumei',
                 'GET /dongman.html'  => 'index/dongman',
                 
-                'GET /prestrain.html'=> 'player/prestrain',
-                'GET /dplayer.html'  => 'player/index',
+                #注册登录
+                'GET /reg.html'      => 'user/reg',
+                'GET /login.html'    => 'user/login',
             ],
         ],
 

@@ -17,4 +17,10 @@ class AboutController extends Controller
         return $this->render('contact');
     }
     
+    public function actionTest()
+    {
+        echo 'test';
+        exit;
+    }
+    
 }
