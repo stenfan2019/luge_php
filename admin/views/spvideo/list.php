@@ -81,7 +81,7 @@
                                 if (res.code == '0') {
                                     layer.msg('删除成功', {icon: 1}, function () {
                                         //obj.del();
-                                        table.reload('data_list');
+                                        table.reload('acticles_table');
                                         //layer.close(index);
                                     });
                                 } else {
@@ -120,7 +120,7 @@
                                 if (res.code == '0') {
                                     layer.msg('加入成功', {icon: 1}, function () {
                                         //obj.del();
-                                        table.reload('data_list');
+                                        table.reload('acticles_table');
                                         //layer.close(index);
                                     });
                                 } else {
