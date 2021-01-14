@@ -59,6 +59,7 @@
                 , {field: 'vod_time',width:'10%', title: '上传时间',align:'center'}
                 , {title: '操作',width:'240px', align: 'center', fixed: 'right', toolbar: '#data_control'}
             ]]
+            ,id:'acticles_table' 
             , page: true
             , limit: 20
             , height: '560px'
@@ -147,9 +148,9 @@
         //监听搜索
         form.on('submit(data_search)', function (data) {
              var field = data.field;
-
+             //alert('acticles_table');
              //执行重载
-             table.reload('data_list', {
+             table.reload('acticles_table', {
                  where: field
              });
          });

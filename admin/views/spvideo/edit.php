@@ -45,7 +45,8 @@
                 success: function (res) {
                     if (res.code == '0') {
                         layer.msg('编辑成功', {icon: 1}, function () {  //提示完后,才执行里面的
-                            parent.location.reload();
+                            //parent.location.reload();
+                            parent.layui.table.reload('acticles_table');
                             parent.layer.close(index);
                         });
                     } else {
