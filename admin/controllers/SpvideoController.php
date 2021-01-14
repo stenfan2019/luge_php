@@ -16,7 +16,15 @@ class SpvideoController extends Base
         if(1 == $data){
             $page = Yii::$app->request->get('page',1);
             $limit = Yii::$app->request->get('limit',20);
+            $keyword = Yii::$app->request->get('keyword','');
+            $type_id = Yii::$app->request->get('type_id','');
             $query = SpVideo::find()->where('is_yy=0');
+            if($keyword){
+                $query->andWhere("vod_name like '%{$keyword}%'");
+            }
+            if($type_id){
+                $query->andWhere("type_id=$type_id");
+            }
             $countQuery = clone $query;
             $count = $countQuery->count();
             $page_num = ceil($count / $limit);
@@ -33,7 +41,9 @@ class SpvideoController extends Base
             ];
             $this->success($data);
         }else{
-            return $this->render('list');
+            return $this->render('list',[
+                'type_label'   => $this->html_select('type_id', SpVideo::$field_title['type_id'])
+            ]);
         }
     }
     

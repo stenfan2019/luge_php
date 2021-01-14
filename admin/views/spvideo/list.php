@@ -1,5 +1,25 @@
 <div class="layui-fluid">
     <div class="layui-card">
+         <div class="layui-form layui-card-header layuiadmin-card-header-auto">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label" style="width:70px; ">关键词查询</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="keyword" placeholder="请输入关键词" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                   <?=$type_label?>
+                </div>
+               
+                <div class="layui-inline">
+                    <button class="layui-btn layuiadmin-btn-admin" lay-submit lay-filter="data_search">
+                        <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+                    </button>
+                </div>
+                
+            </div>
+        </div>
         <div class="layui-card-body">
             <div style="padding-bottom: 10px;">
                 <button class="layui-btn layuiadmin-btn-list" data-type="add">批量加入</button>
@@ -124,7 +144,15 @@
             });
         });
 
-       
+        //监听搜索
+        form.on('submit(data_search)', function (data) {
+             var field = data.field;
+
+             //执行重载
+             table.reload('data_list', {
+                 where: field
+             });
+         });
 
         
 
