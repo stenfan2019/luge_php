@@ -12,9 +12,16 @@ class VideoController extends Controller
     {
         $one = Video::findOne($id);
         if(empty($one)){
-            
+            header("Location:/");
+            exit;
         }
         $this->seo_title = $one->title;
-        return $this->render('detail1');
+        
+        //获取视频推荐
+        $list = Video::find()->where('is_vip=1')->orderBy('hit_num desc')->limit(20)->asArray()->all();
+        return $this->render('detail1',[
+               'video' => $one->toArray(),
+               'lists' => $list
+        ]);
     }
 }
