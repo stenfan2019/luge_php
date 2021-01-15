@@ -8,7 +8,7 @@ class IndexController extends Controller
     /**
      * @var string
      */
-    public $layout = 'main1';
+    public $layout = false;
     
     public $now_nav = 'home';
     

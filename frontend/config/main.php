@@ -63,8 +63,8 @@ return [
                 
                 #注册登录
                 'GET /detail_<id:\d+>.html' => 'video/detail',
-                'GET /reg.html'      => 'user/reg',
-                'GET /login.html'    => 'user/login',
+                'GET /reg.html'      => 'users/reg',
+                'GET /login.html'    => 'users/login',
             ],
         ],
 

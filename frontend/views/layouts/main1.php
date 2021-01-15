@@ -2,8 +2,7 @@
 <html lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta content="width=device-width, initial-scale=1.0, user-scalable=0"
-	name="viewport" />
+<meta content="width=device-width, initial-scale=1.0, user-scalable=0" name="viewport" />
 <title><?=$this->context->seo_title ?>-陆蛤視頻、www.lugetv.com</title>
 <meta name="description" content="成人視頻" />
 <meta name="keywords" content="陆蛤視頻" />
