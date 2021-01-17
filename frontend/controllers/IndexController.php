@@ -2,13 +2,14 @@
 namespace frontend\controllers;
 use yii\web\Controller;
 use common\models\Video;
+use frontend\controllers\Base;
 
-class IndexController extends Controller
+class IndexController extends Base
 {
     /**
      * @var string
      */
-    public $layout = false;
+    public $layout = 'main1';
     
     public $now_nav = 'home';
     
@@ -140,4 +141,6 @@ class IndexController extends Controller
                 ->orderBy('update_time desc')->limit($limit)->asArray()->all();
         return $list;
     }
+    
+    
 }

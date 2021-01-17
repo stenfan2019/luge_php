@@ -40,7 +40,7 @@ return [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'public/404',
+            'errorAction' => 'error/404',
         ],
 
         'urlManager' => [
@@ -63,8 +63,9 @@ return [
                 
                 #注册登录
                 'GET /detail_<id:\d+>.html' => 'video/detail',
-                'GET /reg.html'      => 'users/reg',
-                'GET /login.html'    => 'users/login',
+                'GET,POST /reg.html'      => 'users/reg',
+                'GET,POST /login.html'    => 'users/login',
+                //'GET /logout.html'        => 'userr/logout'
             ],
         ],
 
