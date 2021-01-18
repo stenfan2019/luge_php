@@ -1,10 +1,9 @@
 <?php
 namespace frontend\controllers;
-use yii\web\Controller;
 use yii;
 use frontend\controllers\Base;
 
-class MemberController extends base
+class MemberController extends Base
 {
     public $layout = 'main1';
     public $now_nav = 'home';

@@ -1,10 +1,9 @@
 <?php
-
 namespace frontend\controllers;
+use frontend\controllers\Base;
+use yii;
 
-use yii\web\Controller;
-
-class AboutController extends Controller
+class AboutController extends Base
 {
     /**
      * @var string

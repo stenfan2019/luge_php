@@ -1,10 +1,11 @@
 <?php
 namespace frontend\controllers;
-use yii\web\Controller;
-
-class PlayerController extends Controller
+use frontend\controllers\Base;
+use yii;
+class PlayerController extends Base
 {
     public $layout = false;
+    
     public function actionIndex()
     {
         return $this->render('index');

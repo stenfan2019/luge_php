@@ -40,7 +40,7 @@ return [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'error/404',
+            'errorAction' => 'site/error',
         ],
 
         'urlManager' => [
