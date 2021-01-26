@@ -18,6 +18,9 @@ class VideoController extends Base
             exit;
         }
         $this->seo_title = $one->title;
+        //視頻流量+1
+        $one->hit_num = $one->hit_num +1;
+        $one->update();
         
         //获取视频推荐
         $list = Video::find()->where('is_vip=1')->orderBy('hit_num desc')->limit(20)->asArray()->all();

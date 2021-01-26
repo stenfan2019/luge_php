@@ -19,6 +19,17 @@
 							<div></div>
 						</div>
 					</div>
+					<div class="col-style d-4 m-2 lazy loaded">
+						<a href="http://fhty1760.com"
+							target="_blank" class="videoBox">
+							<div class="videoBox_wrap" style="padding-bottom:80%">
+								<div class="videoBox-cover"
+									style="background-image: url('/static/images/tg01.png');"></div>
+								
+							</div>
+							
+						</a>
+					</div>
 					<?php foreach($lists_16 as $video):?>
 					<div class="col-style d-4 m-2 lazy loaded">
 						<a href="/detail_<?=$video['id']?>.html"
@@ -39,6 +50,17 @@
 						</a>
 					</div>
 					<?php endforeach;?>
+					<div class="col-style d-4 m-2 lazy loaded">
+						<a href="http://fhty1760.com"
+							target="_blank" class="videoBox">
+							<div class="videoBox_wrap" style="padding-bottom:80%">
+								<div class="videoBox-cover"
+									style="background-image: url('/static/images/tg02.png');"></div>
+								
+							</div>
+							
+						</a>
+					</div>
 				</div>
 			</div>
             <?php endif;?>

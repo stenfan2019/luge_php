@@ -19,7 +19,7 @@ class IndexController extends Base
     {
         $this->now_nav = 'home';
         return $this->render('index',[
-            'lists_16'  => $this->getVideoList(16,4),//免费
+            'lists_16'  => $this->getVideoList(16,2),//免费
             'lists_02'  => $this->getVideoList(2,8),//精选
             'lists_01'  => $this->getVideoList(1,8),//中文字幕
             'lists_03'  => $this->getVideoList(3,8),//亞洲無碼
