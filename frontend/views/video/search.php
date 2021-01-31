@@ -20,7 +20,7 @@
 					class="videoBox md-opjjpmhoiojifppkkcdabiobhakljdgm_doc">
 					<div class="videoBox_wrap">
 						<div class="videoBox-cover"
-							style="background-image: url('<?=$video['images']?>');"></div>
+							style="background-image: url('<?=$this->context->res_image . $video['images']?>');"></div>
 					</div>
 					<div class="videoBox-info">
 						<span class="title"><?=$video['title']?></span>

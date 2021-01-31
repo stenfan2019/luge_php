@@ -136,8 +136,8 @@ class AsianssexController extends Controller
         $date = date('ymd');
         $image_save_path = '/data/www/thumbs/' . $date;
         $video_save_path = '/data/www/videos/' . $date;
-     
-        $list = SpVideo::find()->where(['is_do' => '0'])->limit(2)->orderBy('id ASC')->asArray()->all();
+        
+        $list = SpVideo::find()->where(['is_do' => '0'])->limit(20)->orderBy('id ASC')->asArray()->all();
         foreach ($list as $item)
         {
             $id = $item['id'];
@@ -158,6 +158,7 @@ class AsianssexController extends Controller
             $one = SpVideo::findOne($id);
             $one->image_path = $new_image;
             $one->video_path = $new_video;
+            $one->is_do =1;
             $one->update();
         }
     }

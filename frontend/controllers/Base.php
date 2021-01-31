@@ -15,6 +15,10 @@ class Base extends \yii\web\Controller
     
     public $user_model;
     
+    public $res_image = 'https://res-img.wandadai1.com/';
+    
+    public $res_video = 'https://res-mp4.wandadai1.com/';
+    
     private $key = 'LFJkfks$vGAcwBpl';
 
     public function init()

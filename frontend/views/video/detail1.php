@@ -17,8 +17,8 @@
     					    volume: 0.7,
     					    mutex: true,
     					    video: {
-    					        url: "<?=$video['video_url']?>",
-    					        pic: "<?=$video['images']?>"
+    					        url: "<?=$this->context->res_video . $video['video_url']?>",
+    					        pic: "<?=$this->context->res_image . $video['images']?>"
     					        
     					    },
     					});
@@ -88,7 +88,7 @@
 					class="videoBox md-opjjpmhoiojifppkkcdabiobhakljdgm_doc">
 					<div class="videoBox_wrap">
 						<div class="videoBox-cover"
-							style="background-image: url('<?=$item['images']?>');"></div>
+							style="background-image: url('<?=$this->context->res_image . $item['images']?>');"></div>
 					</div>
 					<div class="videoBox-info">
 						<span class="title"><?=$item['title']?></span>

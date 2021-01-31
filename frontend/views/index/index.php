@@ -36,7 +36,7 @@
 							target="_blank" class="videoBox">
 							<div class="videoBox_wrap">
 								<div class="videoBox-cover"
-									style="background-image: url('<?=$video['images']?>');"></div>
+									style="background-image: url('<?=$this->context->res_image . $video['images']?>');"></div>
 								<span class="video-tag free">免費</span>
 							</div>
 							<div class="videoBox-info">
@@ -90,7 +90,7 @@
 							target="_blank" class="videoBox">
 							<div class="videoBox_wrap">
 								<div class="videoBox-cover"
-									style="background-image: url('<?=$video['images']?>');"></div>
+									style="background-image: url('<?=$this->context->res_image . $video['images']?>');"></div>
 								<span class="video-tag free">VIP</span>
 							</div>
 							<div class="videoBox-info">
@@ -134,7 +134,7 @@
 							target="_blank" class="videoBox">
 							<div class="videoBox_wrap">
 								<div class="videoBox-cover"
-									style="background-image: url('<?=$video['images']?>');"></div>
+									style="background-image: url('<?=$this->context->res_image . $video['images']?>');"></div>
 								<span class="video-tag free">VIP</span>
 							</div>
 							<div class="videoBox-info">
@@ -177,7 +177,7 @@
 							target="_blank" class="videoBox">
 							<div class="videoBox_wrap">
 								<div class="videoBox-cover"
-									style="background-image: url('<?=$video['images']?>');"></div>
+									style="background-image: url('<?=$this->context->res_image . $video['images']?>');"></div>
 								<span class="video-tag free">VIP</span>
 							</div>
 							<div class="videoBox-info">
@@ -220,7 +220,7 @@
 							target="_blank" class="videoBox">
 							<div class="videoBox_wrap">
 								<div class="videoBox-cover"
-									style="background-image: url('<?=$video['images']?>');"></div>
+									style="background-image: url('<?=$this->context->res_image . $video['images']?>');"></div>
 								<span class="video-tag free">VIP</span>
 							</div>
 							<div class="videoBox-info">
@@ -263,7 +263,7 @@
 							target="_blank" class="videoBox">
 							<div class="videoBox_wrap">
 								<div class="videoBox-cover"
-									style="background-image: url('<?=$video['images']?>');"></div>
+									style="background-image: url('<?=$this->context->res_image . $video['images']?>');"></div>
 								<span class="video-tag free">VIP</span>
 							</div>
 							<div class="videoBox-info">
@@ -304,7 +304,7 @@
 							target="_blank" class="videoBox">
 							<div class="videoBox_wrap">
 								<div class="videoBox-cover"
-									style="background-image: url('<?=$video['images']?>');"></div>
+									style="background-image: url('<?=$this->context->res_image . $video['images']?>');"></div>
 								<span class="video-tag free">VIP</span>
 							</div>
 							<div class="videoBox-info">
@@ -347,7 +347,7 @@
 							target="_blank" class="videoBox">
 							<div class="videoBox_wrap">
 								<div class="videoBox-cover"
-									style="background-image: url('<?=$video['images']?>');"></div>
+									style="background-image: url('<?=$this->context->res_image . $video['images']?>');"></div>
 								<span class="video-tag free">VIP</span>
 							</div>
 							<div class="videoBox-info">
@@ -389,7 +389,7 @@
 							target="_blank" class="videoBox">
 							<div class="videoBox_wrap">
 								<div class="videoBox-cover"
-									style="background-image: url('<?=$video['images']?>');"></div>
+									style="background-image: url('<?=$this->context->res_image . $video['images']?>');"></div>
 								<span class="video-tag free">VIP</span>
 							</div>
 							<div class="videoBox-info">
@@ -432,7 +432,7 @@
 							target="_blank" class="videoBox">
 							<div class="videoBox_wrap">
 								<div class="videoBox-cover"
-									style="background-image: url('<?=$video['images']?>');"></div>
+									style="background-image: url('<?=$this->context->res_image . $video['images']?>');"></div>
 								<span class="video-tag free">VIP</span>
 							</div>
 							<div class="videoBox-info">
@@ -473,7 +473,7 @@
 							target="_blank" class="videoBox">
 							<div class="videoBox_wrap">
 								<div class="videoBox-cover"
-									style="background-image: url('<?=$video['images']?>');"></div>
+									style="background-image: url('<?=$this->context->res_image . $video['images']?>');"></div>
 								<span class="video-tag free">VIP</span>
 							</div>
 							<div class="videoBox-info">
@@ -515,7 +515,7 @@
 							target="_blank" class="videoBox">
 							<div class="videoBox_wrap">
 								<div class="videoBox-cover"
-									style="background-image: url('<?=$video['images']?>');"></div>
+									style="background-image: url('<?=$this->context->res_image . $video['images']?>');"></div>
 								<span class="video-tag free">VIP</span>
 							</div>
 							<div class="videoBox-info">
@@ -557,7 +557,7 @@
 							target="_blank" class="videoBox">
 							<div class="videoBox_wrap">
 								<div class="videoBox-cover"
-									style="background-image: url('<?=$video['images']?>');"></div>
+									style="background-image: url('<?=$this->context->res_image . $video['images']?>');"></div>
 								<span class="video-tag free">VIP</span>
 							</div>
 							<div class="videoBox-info">
