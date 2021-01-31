@@ -25,7 +25,7 @@
 							<div class="videoBox_wrap" style="padding-bottom:80%">
 								<div class="videoBox-cover"
 									style="background-image: url('/static/images/tg01.png');"></div>
-								
+								 <span class="video-tag free">广告</span>
 							</div>
 							
 						</a>
@@ -56,7 +56,7 @@
 							<div class="videoBox_wrap" style="padding-bottom:80%">
 								<div class="videoBox-cover"
 									style="background-image: url('/static/images/tg02.png');"></div>
-								
+								<span class="video-tag free">广告</span>
 							</div>
 							
 						</a>

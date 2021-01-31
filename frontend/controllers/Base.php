@@ -62,7 +62,7 @@ class Base extends \yii\web\Controller
      * @param string $message 错误信息
      * @param array $data 错误数据
      * @param int $code 状态码
-     * @return json
+     * @return 
      * @author stenfan
      * @date 2020-08-09
      */

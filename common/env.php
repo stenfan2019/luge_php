@@ -41,14 +41,7 @@ if (! function_exists('env')) {
 }
 
 
-/**
- * ---------------------------------------
- * 简单的输出调试函数
- * ---------------------------------------
- */
-function dump($var, $depth = 10, $highlight = false){
-    \yii\helpers\VarDumper::dump($var, $depth, $highlight);
-}
+
 
 
 /**

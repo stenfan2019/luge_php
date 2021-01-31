@@ -18,7 +18,7 @@ class SpvideoController extends Base
             $limit = Yii::$app->request->get('limit',20);
             $keyword = Yii::$app->request->get('keyword','');
             $type_id = Yii::$app->request->get('type_id','');
-            $query = SpVideo::find()->where('is_yy=0');
+            $query = SpVideo::find()->where('is_yy=0 and is_do=1');
             if($keyword){
                 $query->andWhere("vod_name like '%{$keyword}%'");
             }
@@ -62,8 +62,8 @@ class SpvideoController extends Base
             $video->hit_num = $one->vod_hits;
             $video->up_num = $one->vod_up;
             $video->down_num = $one->vod_down;
-            $video->images = $one->vod_pic;
-            $video->video_url = $one->video_url;
+            $video->images = $one->image_path;
+            $video->video_url = $one->video_path;
             $video->images_type = '11';
             $video->video_type = '11';
             $video->create_time = $one->vod_time_add;

@@ -1,6 +1,0 @@
-137.175.11.29 dh88.lugetv.com
-
-http://137.175.11.29:8888/btadmin/
-http://137.175.11.29:8888/btadmin/
-username: lovepr
-password: 9be50983
