@@ -19,19 +19,19 @@ class IndexController extends Base
     {
         $this->now_nav = 'home';
         return $this->render('index',[
-            'lists_16'  => $this->getVideoList(16,2),//免费
-            'lists_02'  => $this->getVideoList(2,8),//精选
-            'lists_01'  => $this->getVideoList(1,8),//中文字幕
-            'lists_03'  => $this->getVideoList(3,8),//亞洲無碼
-            'lists_04'  => $this->getVideoList(4,8),//亞洲有碼
-            'lists_05'  => $this->getVideoList(5,8),//無碼破解
-            'lists_06'  => $this->getVideoList(6,8),//偷拍自拍
-            'lists_07'  => $this->getVideoList(7,8),//網紅
-            'lists_08'  => $this->getVideoList(8,8),//主播            
-            'lists_12'  => $this->getVideoList(12,8),//明星
-            'lists_13'  => $this->getVideoList(13,8),//三级
-            'lists_14'  => $this->getVideoList(14,8),//欧美
-            'lists_15'  => $this->getVideoList(15,8),//动漫
+            'lists_16'  => $this->getVideoList(6,58),//免费
+            'lists_02'  => '',//$this->getVideoList(2,8),//精选
+            'lists_01'  => '',//$this->getVideoList(1,8),//中文字幕
+            'lists_03'  => '',//$this->getVideoList(3,8),//亞洲無碼
+            'lists_04'  => '',//$this->getVideoList(4,8),//亞洲有碼
+            'lists_05'  => '',//$this->getVideoList(5,8),//無碼破解
+            'lists_06'  => '',//$this->getVideoList(6,8),//偷拍自拍
+            'lists_07'  => '',//$this->getVideoList(7,8),//網紅
+            'lists_08'  => '',//$this->getVideoList(8,8),//主播            
+            'lists_12'  => '',//$this->getVideoList(12,8),//明星
+            'lists_13'  => '',//$this->getVideoList(13,8),//三级
+            'lists_14'  => '',//$this->getVideoList(14,8),//欧美
+            'lists_15'  => '',//$this->getVideoList(15,8),//动漫
         ]);
     }
     
@@ -138,7 +138,7 @@ class IndexController extends Base
     protected function getVideoList($cate_id,$limit=60)
     {
         $list = Video::find()->where("is_show=1 and cate_id=$cate_id")
-                ->orderBy('update_time desc')->limit($limit)->asArray()->all();
+                ->orderBy('hit_num desc')->limit($limit)->asArray()->all();
         return $list;
     }
     

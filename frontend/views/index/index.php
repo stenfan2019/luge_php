@@ -3,7 +3,7 @@
 			<div class="videoGroup">
 				<div class="section-title grayBorder">
 					<h2>
-						免費試看<small>（不用註冊限時體驗）</small>
+						推薦視頻</small>
 					</h2>
 					<div class="cat_select_wrap">
 						<a href="#" class="btn btn-info">
