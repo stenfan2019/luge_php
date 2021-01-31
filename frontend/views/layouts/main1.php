@@ -14,7 +14,7 @@
 <link id="layuicss-laydate" rel="stylesheet" href="/static/css/laydate.css?v=5.0.9" media="all" />
 <link id="layuicss-layer" rel="stylesheet" href="/static/css/layer.css?v=3.1.1" media="all" />
 <link id="layuicss-skincodecss" rel="stylesheet" href="/static/css/code.css" media="all" />
-
+<script src="/static/js/jquery.min.js"></script>
 </head>
 <body style="">
 	<header id="header">

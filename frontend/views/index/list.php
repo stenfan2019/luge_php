@@ -33,9 +33,53 @@
 				</a>
 			</div>
 			<?php endforeach;?>
+			
+			
 		</div>
 		<div id="loadmore"
 			style="color: #000; font-size: 16px; text-align: center; margin: 30px 0;"></div>
 	</div>
 </section>
+<script>
+	var loading = false;
+	$(window).scroll(function(){
+		if(!loading && $(window).scrollTop()+$(window).height()>=$(document).height() - 250)
+		{	
+			loading = true;
+			ajaxRead();
+		}
+	});
+	
+	var page=3;//初始页数
+	var mid=1;//mid:模块1视频2文章3专题        
+	var limit=20;//每页条数，支持10,20,30 
+	var order="";//当前order排序
+	var by= "vod_time";//当前排序方式
+	var wd= "";//标题关键词
+	var tag= "";//tag标签
+	function ajaxRead(){
+		var html='' ;
+        $.ajax({
+			url : "/index/data-page?page="+page,
+			type:'GET',
+            dataType:"html",
+            success : function(html){
+               //alert(html);
+               if(html){
+                    var vod_list=$('#app');
+					vod_list.append(html);
+					page +=1
+               }else{
+					$('#loadmore').show().html("已全部加載完畢！");
+				};
+				
+				
+				loading = false;
+			},
+			error:function(){
+				alert("请求失败");
+			}	
+        });
+	}
+  </script>
 

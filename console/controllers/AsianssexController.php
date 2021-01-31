@@ -137,7 +137,7 @@ class AsianssexController extends Controller
         $image_save_path = '/data/www/thumbs/' . $date;
         $video_save_path = '/data/www/videos/' . $date;
         
-        $list = SpVideo::find()->where(['is_do' => '0'])->limit(20)->orderBy('id ASC')->asArray()->all();
+        $list = SpVideo::find()->where(['is_do' => '0'])->limit(100)->orderBy('id ASC')->asArray()->all();
         foreach ($list as $item)
         {
             $id = $item['id'];

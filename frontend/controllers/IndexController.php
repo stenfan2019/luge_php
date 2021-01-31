@@ -1,8 +1,9 @@
 <?php
 namespace frontend\controllers;
-use yii\web\Controller;
+use Yii;
 use common\models\Video;
 use frontend\controllers\Base;
+use yii\data\Pagination;
 
 class IndexController extends Base
 {
@@ -46,7 +47,7 @@ class IndexController extends Base
         return  $this->render('list',[
             'sub_title'   => '最近更新',
             'cate_id'     => 4,
-            'videos'      =>  $list
+            'videos'      => $list
         ]);
     }
     
@@ -82,7 +83,15 @@ class IndexController extends Base
     //偷拍自拍
     public function actionTpzp()
     {
-        return $this->_videolist(6,'tpzp','偷拍自拍');
+        $cate_id = 6;
+        $seo_title = '偷拍自拍';
+        $this->now_nav = 'tpzp';
+        $this->seo_title = $seo_title;
+        return  $this->render('list',[
+            'sub_title'   => $seo_title,
+            'cate_id'     => $cate_id,
+            'videos'      => $this->getVideoListOrderByTime($cate_id,60)
+        ]);
     }
     
     //网红
@@ -124,6 +133,51 @@ class IndexController extends Base
         
     }
     
+    //data
+    public function actionDataPage()
+    {
+        $page = Yii::$app->request->getQueryParam('page',0);
+        $limit = Yii::$app->request->getQueryParam('limit',20);
+        $cate_id = Yii::$app->request->getQueryParam('cid',0);
+        if($page){
+            $query = Video::find()->where("is_show=1");
+                   
+            if($cate_id){
+                $query->andWhere("cate_id=$cate_id");
+            }
+            $countQuery = clone $query;
+            $count = $countQuery->count();
+            $page_num = ceil($count / $limit);
+            $pages = new Pagination(['totalCount' => $count,'defaultPageSize'=>$limit,'page'=>$page-1]);
+            $models = $query->offset($pages->offset)
+                        ->orderBy('create_time desc')
+                        ->limit($limit)
+                        ->asArray()->all();
+           $html = '';
+           foreach ($models as $item){
+               $html = $html .'<div class="col-style d-4 m-2 lazy loaded">';
+               $html = $html .'<a href="/detail_' . $item['id'] . '.html"  target="_blank"';
+               $html = $html .' class="videoBox md-opjjpmhoiojifppkkcdabiobhakljdgm_doc">';
+               $html = $html .' <div class="videoBox_wrap">';
+               $html = $html .' <div class="videoBox-cover"';
+               $html = $html .' style="background-image: url(' . $this->res_image . $item['images'] . ');"></div>';
+               $html = $html .' </div>';
+               $html = $html .' <div class="videoBox-info">';
+               $html = $html .' <span class="title">' . $item['title'] . '</span>';
+               $html = $html .' </div>';
+               $html = $html .' <div class="videoBox-action">';
+               $html = $html .' <span class="views"><i class="fa fa-eye"></i><span class="number">' . $item['hit_num'] . '</span></span>';
+               $html = $html .' <span class="likes"><i class="fa fa-heart"></i><span class="number">' . $item['up_num'] . '</span></span>';
+               $html = $html .' </div>';
+               $html = $html .' </a>';
+               $html = $html .' </div>';
+          }
+          echo $html;
+          exit;
+        }
+        echo $page;
+    }
+    
     protected function _videolist($cate_id,$now_nav,$sub_title)
     {
         $this->now_nav = $now_nav;
@@ -131,8 +185,15 @@ class IndexController extends Base
         return  $this->render('list',[
             'sub_title'   => $sub_title,
             'cate_id'     => $cate_id,
-            'videos'      => $this->getVideoList($cate_id,60)
+            'videos'      => $this->getVideoList($cate_id,20)
         ]);
+    }
+    
+    protected function getVideoListOrderByTime($cate_id,$limit=60)
+    {
+        $list = Video::find()->where("is_show=1 and cate_id=$cate_id")
+                       ->orderBy('create_time desc')->limit($limit)->asArray()->all();
+        return $list;
     }
     
     protected function getVideoList($cate_id,$limit=60)
@@ -141,6 +202,4 @@ class IndexController extends Base
                 ->orderBy('hit_num desc')->limit($limit)->asArray()->all();
         return $list;
     }
-    
-    
 }
