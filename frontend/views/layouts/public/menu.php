@@ -9,7 +9,7 @@
 					
 					<li class="menu_items">
 						<div>
-							<a href="/tpzp.html" class="type <?=$this->context->now_nav=='tpzp' ? 'status_show':''?>">偷拍自拍</a>
+							<a href="/tpzp.html" class="type <?=$this->context->now_nav=='tpzp' ? 'status_show':''?>">自拍視頻</a>
 						</div>
 					</li>
 				</ul>
