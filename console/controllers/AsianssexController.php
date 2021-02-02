@@ -190,7 +190,6 @@ class AsianssexController extends Controller
             if($video->save()){
                 $one->is_yy = 1;
                 $one->update();
-                $this->success([]);
             }
         }
     }
