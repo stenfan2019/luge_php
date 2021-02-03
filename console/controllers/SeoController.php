@@ -16,7 +16,7 @@ class SeoController extends Controller
     {
         $xml = '<?xml version="1.0" encoding="UTF-8"?>';
         $xml = $xml . '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-        $all = Video::find()->limit(10)->asArray()->all();
+        $all = Video::find()->asArray()->all();
         $date = date('Y-m-d');
         foreach ($all as $item){
             $id = $item['id'];
