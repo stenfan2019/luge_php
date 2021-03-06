@@ -7,7 +7,6 @@ use common\helpers\StringHelper;
 use common\models\Admin;
 use common\models\AdminRole;
 use yii;
-use common\models\Anchor;
 use common\models\User;
 use yii\data\Pagination;
 use admin\controllers\Base;

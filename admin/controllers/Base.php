@@ -2,10 +2,7 @@
 namespace admin\controllers;
 
 use admin\models\Admin;
-use http\Url;
 use Yii;
-use backend\controllers\PublicController;
-use yii\filters\Cors;
 use yii\helpers\ArrayHelper;
 use GuzzleHttp\Client;
 
@@ -51,7 +48,7 @@ class Base extends \yii\web\Controller
      * @param string $message 错误信息
      * @param array $data 错误数据
      * @param int $code 状态码
-     * @return json
+     * @return 
      * @author stenfan
      * @date 2020-08-09
      */
@@ -229,27 +226,7 @@ class Base extends \yii\web\Controller
         return $data;
     }
     
-    public function cleanUserinfo($userinfo)
-    {
-        $key = $this->token_key;
-        $redisModel = \vlogapi\models\RedisModel::getSession();
-        unset($userinfo['salt']);
-        unset($userinfo['password'],$userinfo['allowance'],$userinfo['allowance_updated_at']);
-        unset($userinfo['reg_time'],$userinfo['update_time']);
-        unset($userinfo['reg_ip'],$userinfo['last_login_time'],$userinfo['last_login_ip']);
-        
-        $oss_url = Yii::$app->params['oss_url'];
-        $userInfo['image'] = $oss_url . $userinfo['image'];
-       
-        $userinfo['token'] = $this->token;
-        $userinfo['amount'] = sprintf("%.2f",$userinfo['amount'] / 100);
-        $userinfo['give_gift'] = sprintf("%.2f",$userinfo['give_gift'] / 100);
-        $userinfo['give_game'] = sprintf("%.2f",$userinfo['give_game'] / 100);
-        $userinfo['withdraw'] = sprintf("%.2f",$userinfo['withdraw'] / 100);
-        $redisModel->set($key,json_encode($userinfo));
-        $redisModel->expire($key, 86400 * 30);
-        return $userinfo;
-    }
+    
     
     public function _createOrderNumber()
     {
